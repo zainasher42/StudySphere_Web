@@ -1,0 +1,54 @@
+.card1 {
+    width: 962px;
+    height: 803px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: solid 1px #000;
+    background-color: rgba(21, 25, 47, 0.72);
+  }
+  
+  .heading1 {
+    font-family: InriaSans;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-top: 40px;
+  }
+  
+  .p12 {
+    width: 900px;
+    flex-grow: 0;
+    font-family: InriaSans;
+    font-size: 19px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    text-align: left;
+  }
+  
+  .btn111 {
+    width: 174.7px;
+    height: 49px;
+    margin-top: 35px;
+    border-radius: 20px;
+    border: solid 0 #fff;
+    background-color: #ea9022;
+    font-family: InriaSans;
+    color: #fff;
+  }
+  
+  .btn111:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: #f4028a;
+    color: #ffffff; /* New background color on hover */
+  }

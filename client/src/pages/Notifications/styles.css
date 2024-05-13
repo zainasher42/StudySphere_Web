@@ -1,0 +1,60 @@
+.background {
+  width: 1440px;
+  height: 1024px;
+  flex-grow: 0;
+  padding: 23px 0 716px;
+  background-color: #181521;
+}
+.Clear-All-Card {
+  width: 111px;
+  height: 38.2px;
+  flex-grow: 0;
+  margin: 0 34px 20.8px 23px;
+  padding: 13px 32px 11.2px 33px;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 2px #392b65;
+  background-color: rgba(19, 17, 27, 0.72);
+}
+.Clear-All-Text {
+  width: 46px;
+  height: 14px;
+  flex-grow: 0;
+  font-family: InriaSans;
+  font-size: 9.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+.Search-Text {
+  width: 157.1px;
+  height: 17px;
+  flex-grow: 0;
+  margin: 0 0px 0 0;
+  font-family: InriaSans;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #392b65;
+}
+
+.Search-Card {
+  width: 1226px;
+  height: 37px;
+  flex-grow: 0;
+  margin: 0 23px 22px 46px;
+  padding: 9px 1050.4px 11px 18.5px;
+  border-radius: 14px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 2px #392b65;
+  background-color: rgba(17, 15, 24, 0.72);
+}
+

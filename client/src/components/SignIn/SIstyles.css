@@ -1,0 +1,151 @@
+.background {
+  background-image: url("./background.jpg");
+  background-size: cover; /* Cover the entire container with the background image */
+  background-position: center; /* Center the background image */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  display: flex; /* Use flexbox for centering content vertically */
+  flex: wrap;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: white; /* Example: Set text color to white */
+  /* Add any other styles you need for your content */
+}
+
+.card {
+  width: 386px;
+  height: 568px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: solid 1px #000;
+  background-color: rgba(21, 25, 47, 0.72);
+}
+
+.logos1 {
+  width: 222px;
+  height: 195px;
+  margin-top: -25px;
+  margin-bottom: -72px;
+}
+
+.Title1 {
+  font-family: InriaSans;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  margin-top: 1px;
+}
+
+input {
+  width: 313px;
+  height: 14px;
+  flex-grow: 0;
+  margin-top: 20px;
+  padding: 15px 16px 15px 17px;
+  border-radius: 18px;
+  border: solid 0.5px #fff;
+  background-color: #15192f;
+  color: white;
+  font-size: 14px;
+  font-family: InriaSans;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+}
+
+input::placeholder {
+  width: 280px;
+  height: 18px;
+  flex-grow: 0;
+  font-family: InriaSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:hover {
+  transition: 0.3s;
+  border: solid 1px #ea9022;
+}
+
+.t2 {
+  margin-top: 40px;
+}
+
+.text11 {
+  width: 300px;
+  height: 10px;
+  margin: 21px 49px 22px 50px;
+  font-family: InriaSans;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 30px;
+}
+
+.text11 .text12 {
+  color: #ea9022;
+}
+
+.text11 .text12:hover {
+  transition: 0.3s;
+  color: #f4028a;
+}
+
+.btn1 {
+  width: 174.7px;
+  height: 49px;
+  margin-top: 24px;
+  border-radius: 20px;
+  border: solid 0 #fff;
+  background-color: #ea9022;
+  font-family: InriaSans;
+  color: #fff;
+}
+
+.btn1:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #f4028a;
+  color: #ffffff; /* New background color on hover */
+}
+
+.btn2 {
+  width: 174.7px;
+  height: 49px;
+  margin-top: 19px;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: solid 1px #ea9022;
+  background-color: rgba(21, 25, 47, 0.72);
+  font-family: InriaSans;
+  color: #fff;
+}
+
+.btn2:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  border: solid 1px #f4028a;
+  color: #ffffff; /* New background color on hover */
+}
+
+.link1{
+  color: white;
+}

@@ -1,0 +1,72 @@
+.background {
+    background-color: rgb(24, 21, 33);
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    display: flex; /* Use flexbox for centering content vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: white; /* Example: Set text color to white */
+    /* Add any other styles you need for your content */
+  }
+  
+  .Wallpaper {
+    background-image: url('../../assets/background.jpg'); /* Replace 'your-image-url.jpg' with the URL or path to your background image */
+
+    
+    width: 1345px;
+    height: 400px;
+    margin: 36px 49px 46px 46px;
+    padding: 131px 407px 71px 410px;
+    border-radius: 22px;
+  }
+  
+  .Date-Text {
+    width: 175px;
+    height: 30px;
+    margin: 41px 177px 0 176px;
+    font-family: InriaSans;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .Welcome-Text {
+    width: 528px;
+    height: 97px;
+    margin: 0 0 41px;
+    font-family: InriaSans;
+    font-size: 89px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .Day-Text {
+    width: 67px;
+    height: 30px;
+    margin: 71px 232px 0 229px;
+    font-family: InriaSans;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+  .Home---UsersSupervisors {
+    width: 1440px;
+    height: 1024px;
+    flex-grow: 0;
+    padding: 0 0 269px;
+    background-color: #181521;
+  }
+  
