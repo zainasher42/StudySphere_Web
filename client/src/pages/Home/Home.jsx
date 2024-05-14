@@ -22,6 +22,10 @@ import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
+import videoChannels1 from "../videoChannels";
+import videoChannels2 from "../voiceChannels";
+import { useNavigate } from 'react-router-dom';
+import DialogButton from "../../components/general/dialogbox";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -79,6 +83,34 @@ export default function Home() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
+  const history = useNavigate(); 
+  const [searchInput, setSearchInput] = React.useState('');
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      
+      // Check if search input matches the format "Video Channels {num}"
+    const videoChannelMatch = searchInput.match(/^Video Channel (\d+)$/);
+
+    // Check if search input matches the format "Voice Channels {num}"
+    const voiceChannelMatch = searchInput.match(/^Voice Channel (\d+)$/);
+
+    if (videoChannelMatch) {
+      const channelNum = parseInt(videoChannelMatch[1]);
+      if (videoChannels1.includes(`Video Channel ${channelNum}`)) {
+        history(`/room/${channelNum}`);
+      }
+    } else if (voiceChannelMatch) {
+      const channelNum = parseInt(voiceChannelMatch[1]);
+      if (videoChannels2.includes(`Voice Channel ${channelNum}`)) {
+        history(`/rooms/${channelNum}`);
+      }
+    }
+
+    }
+  };
+
   return (
     <>
       <AppBar
@@ -102,39 +134,17 @@ export default function Home() {
             <SearchIconWrapper1>
               <SearchIcon />
             </SearchIconWrapper1>
-            <form>
+            <form onChange={(event) => {
+                setSearchInput(event.target.value);
+              }}
+              onKeyDown={handleKeyDown}>
               <StyledInputBase
                 placeholder="Search Channels"
                 inputProps={{ "aria-label": "search" }}
               />
             </form>
           </Search>
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{
-              borderRadius: "20px",
-              backgroundColor: "#13111b",
-              border: 1,
-              borderWidth: "2px",
-              borderColor: "#392b65",
-              width: "14%",
-              "&:hover": {
-                backgroundColor: "#13111b",
-                borderColor: "#ea9022",
-              },
-              marginTop: 0,
-              marginLeft: 3,
-              textAlign: "left",
-            }}
-            onClick={(event) => {
-              //setSelectedChannel(text);
-              //console.log(text);
-              //rest of functionality
-            }}
-          >
-            JOIN CHANNEL
-          </Button>
+          <DialogButton/>
 
           <Avatar
             alt="Remy Sharp"
@@ -304,6 +314,7 @@ export default function Home() {
                   borderRadius: "14px",
                 }}
               />
+              <Link to="/VoiceLobby" >
               <Button
                 variant="contained"
                 sx={{
@@ -338,6 +349,7 @@ export default function Home() {
                 }}
                 data-text="Voice Channels"
               ></Button>
+              </Link>
             </div>
 
             <div
@@ -415,6 +427,7 @@ export default function Home() {
                   borderRadius: "14px",
                 }}
               />
+              <Link to="/">
               <Button
                 variant="contained"
                 sx={{
@@ -449,6 +462,7 @@ export default function Home() {
                 }}
                 data-text="Quit session"
               ></Button>
+              </Link>
             </div>
           </Stack>
         </div>

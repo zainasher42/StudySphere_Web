@@ -9,6 +9,8 @@ import RoomPage from './pages/VideoRoom/VideoRoom';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Home from './pages/Home/Home';
+import VoiceLobby from './pages/VoiceLobby/VoiceLobby';
+import RoomsPage from './pages/VoiceRoom/VoiceRoom';
 
 
 {/*
@@ -45,6 +47,8 @@ function App() {
         <Route path="/VideoLobby" element={<LobbyScreen />} />
         <Route path="/home" element={<Home />}/>
         <Route path="/room/:roomId" element={<RoomPage />} />
+        <Route path="/VoiceLobby" element={<VoiceLobby />} />
+        <Route path="/rooms/:roomId" element={<RoomsPage />} />
       </Routes>
     </Router>
     </div>

@@ -89,10 +89,11 @@ import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Avatar from "@mui/material/Avatar";
 import voicec from "../../components/voicec.gif";
+import videoChannels1 from "../videoChannels";
 
 const drawerWidth = 351;
 const email = "abc";
-const videoChannels1 = ["Video Channel 1", "Video Channel 2", "Video Channel 3"];
+//const videoChannels1 = ["Video Channel 1", "Video Channel 2", "Video Channel 3"];
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",

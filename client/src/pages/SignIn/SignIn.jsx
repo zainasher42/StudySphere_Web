@@ -4,7 +4,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import BackgroundImg from '../../components/BackgroundImg'
 import SignInCard from '../../components/SignIn/SignInCard'
 
-function SignIn() {
+function SignIn(props) {
   return (
       <>
           <BackgroundImg />

@@ -4,6 +4,7 @@ import logo from '../logo.png';
 import { Link } from 'react-router-dom'; 
 import { createUserWithEmailAndPassword } from 'firebase/auth'; // Import the createUserWithEmailAndPassword method
 import { auth } from '../../fire'; // Import the auth object from your Firebase configuration
+import SimpleAlert from '../general/snackbar';
 
 function SignUpCard() {
   const [username, setUsername] = useState('');
@@ -36,19 +37,22 @@ function SignUpCard() {
   };
 
   return (
+    <>
     <div className="card">
       <h1 className='Title'>SIGN UP</h1>
       <input type="text" name="username" placeholder="USERNAME" value={username} onChange={(e) => setUsername(e.target.value)} />
       <input type="text" name="email" placeholder="EMAIL" value={email} onChange={(e) => setEmail(e.target.value)} />
       <input type="password" name="password" placeholder="PASSWORD" value={password} onChange={(e) => setPassword(e.target.value)} className="t2" />
       <input type="password" name="confirmPassword" placeholder="CONFIRM PASSWORD" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+      {success ? (
+      <p className="success">User successfully signed up. <Link to="/" className="text2 success-link">Sign in</Link> to continue.</p>
+    ) : (
       <p className="text1">Already have an account? <Link to="/" className="text2">SIGN IN</Link></p>
-      {error && <p className="error">{error}</p>}
-      {success && (
-        <p className="success">User successfully signed up. <Link to="/" className="text2">Sign in</Link> to continue.</p>
-      )}
-      {!success && <button className="btn1" onClick={handleSignUp}>SIGN UP</button>}
-    </div>
+    )}
+    {!success && <button className="btn1" onClick={handleSignUp}>SIGN UP</button>}
+  </div>
+    {error && <SimpleAlert message={error} type="error"/>}
+    </>
   );
 }
 

@@ -160,3 +160,16 @@
     border: solid 1px #f4028a;
     color: #ffffff; /* New background color on hover */
   }
+
+  .success{
+    margin-top: 55px;
+  }
+
+  .text2{
+    color: #553ea1;
+  }
+
+  .text2:hover{
+    cursor: pointer;
+    color: #ea9022;
+  }

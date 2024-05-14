@@ -26,11 +26,13 @@ import InputBase from "@mui/material/InputBase";
 import Avatar from "@mui/material/Avatar";
 import voicec from "../../components/voicec.gif";
 import Stack from "@mui/material/Stack";
-import videoChannels1 from "../videoChannels";
+import you from "../../components/you.gif";
+import others from "../../components/others.gif";
+import videoChannels2 from "../voiceChannels";
 
 const drawerWidth = 351;
 const email = "abc";
-//const videoChannels1 = ["Video Channel 1", "Video Channel 2", "Video Channel 3"];
+//const videoChannels2 = ["Voice Channel 1", "Voice Channel 2", "Voice Channel 3"];
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -67,7 +69,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const RoomPage = () => {
+const RoomsPage = () => {
   /*const socket = useSocket();
   const [remoteSocketId, setRemoteSocketId] = useState(null);
   const [myStream, setMyStream] = useState();
@@ -195,7 +197,7 @@ const RoomPage = () => {
     (data) => {
       const { room } = data;
       console.log("Room-itr2:", room);
-      navigate(`/room/${room}`);
+      navigate(`/rooms/${room}`);
     },
     [navigate]
   );
@@ -218,7 +220,7 @@ const RoomPage = () => {
     if (event.key === "Enter") {
       event.preventDefault();
       const inputValue = searchValue.trim();
-      const exists = videoChannels1.includes(inputValue);
+      const exists = videoChannels2.includes(inputValue);
       if (exists) {
         const button = document.getElementById(inputValue);
         if (button) {
@@ -331,7 +333,7 @@ const RoomPage = () => {
 
   const url=window.location.href;
   const sc2=url.charAt(url.length-1);
-  const sc1="Video Channel ";
+  const sc1="Voice Channel ";
   const title3=sc1 + sc2;
   const [isButtonHidden, setButtonHidden] = useState(false);
 
@@ -433,7 +435,7 @@ const RoomPage = () => {
               />
             </form>
           </Search>
-          {videoChannels1.map((text, index) => (
+          {videoChannels2.map((text, index) => (
             <Button
               key={index}
               variant="contained"
@@ -587,7 +589,7 @@ const RoomPage = () => {
             top={110}
             left={400}
           >
-            YOUR STREAM
+            YOU
           </Typography>
           <div style={{ position: "absolute", top: 72, left:400}}>
           <ReactPlayer
@@ -597,6 +599,20 @@ const RoomPage = () => {
             width="259px"
             url={myStream}
           />
+          <Avatar
+              src={you}
+              sx={{
+                bgcolor: "#392b65",
+                position: "absolute",
+                top: 95,
+                left:-296,
+                height:"210px",
+                width:"259px",
+                borderRadius: 3,
+                marginLeft: 37,
+                zIndex: 0,
+              }}
+            />
           </div>
         </>
       )}
@@ -615,7 +631,7 @@ const RoomPage = () => {
             top={400}
             left={400}
           >
-            OTHER'S STREAM
+            OTHERS
           </Typography>
           <Stack direction="row" spacing={2} alignItems="stretch">
           <div style={{ position: "absolute", top: 360, left:400}}>
@@ -626,6 +642,20 @@ const RoomPage = () => {
             width="259px"
             url={remoteStream}
           />
+          <Avatar
+              src={others}
+              sx={{
+                bgcolor: "#392b65",
+                position: "absolute",
+                top: 95,
+                left:-296,
+                height:"210px",
+                width:"259px",
+                borderRadius: 3,
+                marginLeft: 37,
+                zIndex: 0,
+              }}
+            />
           </div>
           </Stack>
         </>
@@ -635,4 +665,4 @@ const RoomPage = () => {
   );
 };
 
-export default RoomPage;
+export default RoomsPage;
