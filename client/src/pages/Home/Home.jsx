@@ -35,6 +35,7 @@ const Search = styled("div")(({ theme }) => ({
   borderWidth: 2,
   borderStyle: "solid",
   "&:hover": {
+    
     borderColor: "#ea9022",
   },
   marginBottom: 14,
